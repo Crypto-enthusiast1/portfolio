@@ -1,0 +1,163 @@
+.promo {
+   background: url('../../img/wallpaperflare.jpg') no-repeat center/cover;
+   min-height: 100vh;
+   padding-top: 205px;
+}
+
+.subheader {
+   color: #000;
+   font-size: 16px;
+   font-weight: 700;
+   line-height: normal;
+}
+
+.header {
+   color: #000;
+   font-size: 48px;
+   font-weight: 700;
+   line-height: 60px;
+}
+
+.sidepanel {
+   position: fixed;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   margin-left: 65px;
+   transform: translateY(-50%);
+   top: 50%;
+   z-index: 1;
+
+   &__line {
+      width: 2px;
+      height: 70px;
+      background-color: #000;
+      margin: 15px 0;
+   }
+
+   &__social {
+      color: #000;
+      font-size: 16px;
+      font-weight: 700;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+   }
+}
+
+.burger {
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   right: 30px;
+   top: 20px;
+   height: 21px;
+   justify-content: space-between;
+   align-items: end;
+   cursor: pointer;
+}
+
+.line {
+   width: 30px;
+   height: 3px;
+   background-color: #000;
+
+   &__long {
+      width: 36px;
+      height: 3px;
+      background-color: #000;
+   }
+}
+
+.overflow {
+   display: none;
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   top: 0;
+   background-color: rgba(255, 255, 255, 0.75);
+}
+
+.menu {
+   position: absolute;
+   top: 0px;
+   width: 345px;
+   height: 100vh;
+   padding-left: 60px;
+   background-color: $main-color;
+   z-index: 2;
+   transform: translateX(-100%);
+   transition: 0.6s all;
+}
+
+.active {
+   transform: translateX(0%);
+}
+
+.close {
+   position: absolute;
+   top: 25px;
+   right: 25px;
+   cursor: pointer;
+
+   &-line1 {
+      width: 30px;
+      height: 3px;
+      background-color: #000;
+      transform: rotate(45deg) translate(2px);
+   }
+
+   &-line2 {
+      width: 30px;
+      height: 3px;
+      background-color: #000;
+      transform: rotate(-45deg) translate(2px);
+   }
+}
+
+.competence {
+   display: flex;
+   flex-direction: column;
+   margin-top: 140px;
+
+
+   & a {
+      width: fit-content;
+      margin-bottom: 15px;
+      position: relative;
+      text-decoration: none;
+      color: #FFF;
+      font-size: 24px;
+      font-weight: 700;
+
+      &::before {
+         content: '';
+         display: block;
+         position: absolute;
+         width: 15px;
+         height: 15px;
+         background-color: inherit;
+         border-radius: 100%;
+         border: 1px solid black;
+         top: 50%;
+         transform: translateY(-50%);
+         left: -30px;
+      }
+   }
+}
+
+.social {
+   display: flex;
+   position: absolute;
+   width: 90px;
+   bottom: 50px;
+   right: 50%;
+   transform: translateX(50%);
+   justify-content: space-between;
+
+
+   & a {
+      width: 20px;
+      height: 20px;
+   }
+}
