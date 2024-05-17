@@ -19,15 +19,16 @@
       }
    }
 
-   &-descr{
+   &-descr {
       margin-top: 5px;
       margin-bottom: 15px;
    }
 
-   &-name{
+   &-name {
       position: relative;
       @include before_circle_mini;
-      &::before{
+
+      &::before {
          left: -25px;
       }
    }
@@ -36,10 +37,9 @@
       display: grid;
       grid-template-columns: repeat(2, 340px);
       grid-template-rows: repeat(3, auto);
-      column-gap: 330px;
       row-gap: 15px;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
       margin-top: 85px;
    }
 
@@ -47,6 +47,6 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      
+
    }
 }
