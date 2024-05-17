@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+
    const menu = document.querySelector('.menu');
    const overflow = document.querySelector('.overflow');
 
@@ -58,6 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
+   new WOW().init();
 
 });
