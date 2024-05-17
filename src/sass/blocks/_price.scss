@@ -1,0 +1,52 @@
+.price {
+   margin-top: 70px;
+
+   &-head {
+      position: relative;
+      text-align: center;
+      @include before_circle_center;
+      @include orange_line;
+
+      &::after {
+         position: absolute;
+         left: 50%;
+         transform: translateX(-50%);
+         bottom: -30px;
+      }
+
+      &::before {
+         top: -8px;
+      }
+   }
+
+   &-descr{
+      margin-top: 5px;
+      margin-bottom: 15px;
+   }
+
+   &-name{
+      position: relative;
+      @include before_circle_mini;
+      &::before{
+         left: -25px;
+      }
+   }
+
+   &-grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 340px);
+      grid-template-rows: repeat(3, auto);
+      column-gap: 330px;
+      row-gap: 15px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 85px;
+   }
+
+   &-elem {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+   }
+}

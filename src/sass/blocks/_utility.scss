@@ -1,0 +1,115 @@
+.utility {
+   padding-top: 120px;
+
+   &-head {
+      position: relative;
+      text-align: center;
+      @include before_circle_center;
+   }
+
+   &-experiance {
+      display: grid;
+      position: relative;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto 1fr;
+      grid-auto-rows: auto;
+      margin-top: 45px;
+
+      &::before {
+         content: '';
+         position: absolute;
+         width: 1px;
+         height: calc(100% + 45px);
+         background-color: #000;
+         left: -35px;
+         top: -48px;
+      }
+   }
+
+   &-miniwrap {
+      padding-left: 19px;
+      grid-column: 2/3;
+      line-height: 13px;
+   }
+
+   &-education {
+      position: relative;
+      margin-top: 85px;
+      line-height: 20px;
+      margin-bottom: 0;
+      @include before_circle_mini;
+   }
+
+   &-work {
+      position: relative;
+      line-height: 20px;
+      margin-top: 85px;
+      margin-bottom: 0;
+      @include before_circle_mini;
+   }
+
+   &-subhead {
+      position: relative;
+      line-height: 60px;
+      text-align: center;
+      @include orange_line;
+
+      &::after {
+         position: absolute;
+         left: 50%;
+         transform: translateX(-50%);
+         bottom: -25px;
+      }
+   }
+
+   &-experiance-name {
+      display: inline-block;
+      color: #000;
+      font-size: 14px;
+      font-weight: 700;
+   }
+
+   &-experiance-icon {
+      position: relative;
+      padding-left: 18px;
+      @include before_circle_top0;
+
+      &::before {
+         top: -8px;
+         left: 0;
+      }
+
+      &::after {
+         content: '';
+         position: absolute;
+         height: 1px;
+         width: 35px;
+         background-color: #000;
+         left: -34px;
+         top: 9px;
+      }
+   }
+
+   &-experiance-specialtity {
+      display: inline-block;
+      color: #000;
+      font-size: 12px;
+      font-weight: 500;
+   }
+
+   &-experiance-description {
+      color: #000;
+      font-size: 12px;
+      font-weight: 500;
+      grid-column: 1/3;
+      margin-top: 12px;
+   }
+
+   &-grid-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 375px);
+      column-gap: 186px;
+      row-gap: 45px;
+      justify-content: center;
+   }
+}

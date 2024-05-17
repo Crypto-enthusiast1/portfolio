@@ -1,0 +1,109 @@
+.skills {
+   margin-top: 130px;
+
+   &-head {
+      position: relative;
+      text-align: center;
+      @include before_circle_center;
+   }
+
+   &-subhead {
+      position: relative;
+      text-align: center;
+      @include orange_line;
+
+      &::after {
+         position: absolute;
+         left: 50%;
+         transform: translateX(-50%);
+         bottom: -25px;
+      }
+   }
+
+   &-grid-container {
+      margin-top: 85px;
+      display: grid;
+      grid-template-columns: repeat(4, 270px);
+      grid-template-rows: repeat(2, minmax(270px, auto));
+      grid-auto-rows: minmax(270px, auto);
+      align-items: center;
+      justify-content: center;
+   }
+
+   &-grid-elem {
+      min-height: 270px;
+      padding: 30px 30px 25px 30px;
+      border: 1px solid #000;
+      margin-left: 13px;
+      margin-bottom: 13px;
+
+      &:nth-child(4) {
+         padding-top: 45px;
+
+         & .name-skill {
+            margin-top: 33px;
+         }
+      }
+
+      &:nth-child(7) {
+         padding-top: 38px;
+
+         & .name-skill {
+            margin-top: 32px;
+         }
+      }
+   }
+
+   &-grid-percent {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(350px, auto));
+      grid-template-rows: repeat(2, 1fr);
+      grid-auto-rows: auto;
+      align-items: center;
+      justify-content: center;
+      column-gap: 45px;
+      row-gap: 40px;
+      margin-top: 130px;
+   }
+
+   &-item-percent {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      & .fz14 {
+         position: relative;
+         padding-left: 15px;
+         @include before_circle;
+      }
+
+      & .number {
+         line-height: 20px;
+      }
+   }
+}
+
+.scale-wrapper {
+   display: block;
+   height: 14px;
+   width: 100%;
+   background-color: #E8E4DE;
+   margin-top: 25px;
+   border-radius: 5px;
+}
+
+.scale-orange {
+   display: block;
+   height: 100%;
+   border-radius: 5px;
+   background-color: $main-color;
+}
+
+.name-skill {
+   margin-top: 20px;
+}
+
+.skill-descr {
+   margin-top: 15px;
+   line-height: 18px;
+}

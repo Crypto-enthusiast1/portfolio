@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       btnBurger.addEventListener('click', () => {
          menu.classList.add('active')
-         overflow.style.display = 'block';
+         overflow.classList.add('active_overflow')
+         document.body.style.overflow = 'hidden';
       })
    }
 
@@ -19,22 +20,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
       close.addEventListener('click', () => {
          menu.classList.remove('active')
-         overflow.style.display = 'none';
-
+         overflow.classList.remove('active_overflow')
+         document.body.style.overflow = '';
       })
 
       overflow.addEventListener('click', () => {
          menu.classList.remove('active')
-         overflow.style.display = 'none';
+         overflow.classList.remove('active_overflow')
+         document.body.style.overflow = '';
       })
 
    }
 
    closeMenu()
 
+   //Orange line
 
+   const procentOfOrangeLine = document.querySelectorAll('.number');
+   const allOrangeLine = document.querySelectorAll('.scale-orange');
 
+   function setWidth() {
+      if (procentOfOrangeLine.length === allOrangeLine.length) {
 
+         procentOfOrangeLine.forEach((item, i) => {
+
+            const percentText = item.textContent.trim();
+            allOrangeLine[i].style.width = percentText;
+         });
+      } else {
+         console.error('Количество элементов не совпадает, нельзя установить ширину');
+      }
+   }
+
+   setWidth();
 
 
 

@@ -1,3 +1,12 @@
+.buttons button{
+   border: none;
+   background-color: initial;
+   border-radius: 5px;
+   &.orange {
+      background-color: $main-color;
+   }
+}
+
 .btn {
    padding: 12px 25px;
    color: #000;
@@ -5,8 +14,11 @@
    font-weight: 700;
    line-height: normal;
    text-decoration: none;
+
+   &:hover {
+      // transform: scale(1.1);
+      box-shadow: 3px 3px 20px $main-color;
+      background-color: $main-color;
+   }
 }
 
-.orange {
-   background-color: $main-color;
-}

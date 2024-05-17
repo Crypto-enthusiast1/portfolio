@@ -1,0 +1,42 @@
+.portfolio {
+   margin-top: 130px;
+
+   &-head {
+      position: relative;
+      text-align: center;
+      margin: 0;
+      @include before_circle_center;
+
+      &::before {
+         top: -9px;
+      }
+   }
+
+   &-subhead {
+      position: relative;
+      text-align: center;
+      @include orange_line;
+
+      &::after {
+         position: absolute;
+         left: 50%;
+         transform: translateX(-50%);
+         bottom: -25px;
+      }
+   }
+
+   &-grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(280px, auto));
+      grid-template-rows: repeat(2, minmax(280px, auto));
+      grid-auto-rows: auto;
+      column-gap: 5px;
+      row-gap: 5px;
+      margin-top: 85px;
+
+      & img:nth-child(4){
+         grid-column: 4;
+         grid-row: 1/3;
+      }
+   }
+}
