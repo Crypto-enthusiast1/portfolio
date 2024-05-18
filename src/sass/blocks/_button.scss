@@ -1,7 +1,8 @@
-.buttons button{
+.buttons button {
    border: none;
    background-color: initial;
    border-radius: 5px;
+
    &.orange {
       background-color: $main-color;
    }

@@ -28,14 +28,13 @@
       grid-auto-rows: minmax(270px, auto);
       align-items: center;
       justify-content: center;
+      gap: 13px;
    }
 
    &-grid-elem {
       min-height: 270px;
       padding: 30px 30px 25px 30px;
       border: 1px solid #000;
-      margin-left: 13px;
-      margin-bottom: 13px;
 
       &:nth-child(4) {
          padding-top: 45px;
