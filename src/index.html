@@ -272,9 +272,14 @@
             <img src="img/uber.jpg" alt="uber">
             <img src="img/pulse.jpg" alt="pulse">
             <img src="img/bread.jpg" alt="bread">
-            <img src="img/plans.jpg" alt="plans">
+            <img srcset="img/plans.jpg 565w,
+                          img/plansmini.png 280w" sizes="(max-width: 575px) 280px,
+                          (min-width: 576px) 565px" src="img/plans.jpg" alt="plans">
             <img src="img/ipad.jpg" alt="ipad">
-            <img src="img/mac.jpg" alt="mac">
+            <img srcset="img/mac.jpg 565w,
+                  img/macmini.png 280w" sizes="(max-width: 575px) 280px,
+                  (min-width: 576px) 565px" src="img/mac.jpg" alt="mac">
+
          </div>
       </div>
    </section>
@@ -347,7 +352,7 @@
                      <textarea name="text" id="text"></textarea>
                      <label for="text">Ваше сообщение</label>
                   </div>
-                  <div><button class="btn contacts-btn">Отправить сообщение</button></div>
+                  <div class="send"><button class="btn contacts-btn">Отправить сообщение</button></div>
                </form>
             </div>
          </div>
